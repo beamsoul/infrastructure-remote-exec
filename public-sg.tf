@@ -1,9 +1,7 @@
-resource "aws_security_group" "public" {
+resource "aws_security_group" "jenkins" {
   name        = "jenkins"
   description = "Allow inbound traffic"
-  vpc_id      = "${aws_vpc.dev.id}"
-
-  }
+  vpc_id      = "${var.vpc}"
 
   ingress {
     from_port   = 22
@@ -25,10 +23,11 @@ resource "aws_security_group" "public" {
     protocol        = "-1"
     cidr_blocks     = ["0.0.0.0/0"]
   }
-    tags = {
+
+  tags = {
       Name = "${var.Name}.public"
       Env = "${var.Env}"
       Created_by = "${var.Created_by}"
       Dept = "${var.Dept}"
   }
-
+}
