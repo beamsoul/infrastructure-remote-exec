@@ -13,10 +13,8 @@ resource "aws_instance" "r1soft" {
             private_key = "${file("~/.ssh/id_rsa")}"
         }
         inline  = [
-            "" ,
+            "sudo yum install telnet -y",
             
-            "",
-            "" 
         ]
     }
 }
