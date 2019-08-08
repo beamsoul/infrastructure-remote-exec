@@ -1,3 +1,4 @@
+
 variable "Name" {}
 variable "Created_by" {}
 variable "Dept" {}
@@ -9,12 +10,6 @@ variable "user" {}
 variable "zone_id" {}
 variable "domain" {}
 variable "record" {}
-
-
-
-
-
-
 
 
 
