@@ -1,5 +1,5 @@
 resource "aws_security_group" "r1soft" {
-  name        = "jenkins"
+  name        = "r1soft"
   description = "Allow inbound traffic"
   vpc_id      = "${var.vpc}"
 
